@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+	<title>Javascript: Exericise 2</title>
+	<script type="text/javascript" charset="utf-8" src="date.js"></script>
+</head>
+
+<body>
+	<h1>Exercise 2</h1>
+	<p>
+		Using the page you created in Exercise 1, remove the script reference from
+		the <tt>&lt;head&gt;</tt> and update your inline script tag to write the
+		date and time directly to the page, using a common format (ex. 19:15, 11/5/2009).
+	</p>
+	<p>
+		These are some common date functions:
+	</p>
+	<pre>
+		var date = new Date();  // creates a new Date variable
+		date.getHours();        // the current hour of the day (24 hour format)
+		date.getMinutes();      // the current minute of the hour
+		date.getMonth();        // the number of the current month (ex. 11 for November)
+		date.getDate();         // the current day of the month
+		date.getFullYear();     // the year in YYYY format
+	</pre>
+	<script type="text/javascript" charset="utf-8">
+		var current_date = new Date();
+		var hour = current_date.getHours();
+		var minutes = current_date.getMinutes();
+		var month = current_date.getMonth();
+		var day = current_date.getDate();
+		var year = current_date.getFullYear();
+		document.write("The time is now: " + hour + ":" + minutes + ", "
+									 + month + "/" + day + "/" + year);
+	</script>
+</body>
+
+</html>

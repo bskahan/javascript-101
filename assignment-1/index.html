@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+	<title>Javascript: Exericise 1</title>
+	<script type="text/javascript" charset="utf-8" src="date.js"></script>
+</head>
+
+<body>
+	<h1>Assignment</h1>
+	<p>
+		Create a new HTML page called clock.html.  Using a <tt>&lt;script&gt;</tt>
+		tag, design a human friendly clock.
+	</p>
+	<p>
+		<img src="../images/FTIXHA5G1OQPHK0.MEDIUM.jpg" />
+	</p>
+	<script type="text/javascript" charset="utf-8">
+
+		var myDate = new Date();
+		var hours = myDate.getHours();
+
+		if(hours > 12) {
+				hours = hours - 12;
+		}
+
+		var minutes = myDate.getMinutes();
+
+		var minutesPhrase;
+		if(minutes <= 5) {
+				timePhrase = 'about ' + hours + ' o\'clock'; 
+		} else if (minutes <= 15) {
+				timePhrase = 'about quarter past ' + hours;
+		} else if (minutes <= 30) {
+				timePhrase = 'about half past ' + hours;
+		} else if (minutes <= 45) {
+				hours++;
+				timePhrase = 'almost quarter till ' + hours;
+		} else if (minutes > 45) {
+				hours++;
+				timePhrase = 'almost ' + hours + ' o\'clock';
+		}
+
+		document.write(timePhrase);
+
+		</script>
+
+</body>
+
+</html>

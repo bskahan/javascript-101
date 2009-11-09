@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+	<title>Javascript: Exericise 1</title>
+	<script type="text/javascript" charset="utf-8" src="date.js"></script>
+</head>
+
+<body>
+	<h1>Exercise 1</h1>
+	<p>
+		Create an HTML page that will allow you to "alert" the date and time the page
+		is loaded three times.  At the top of the HTML page, insert any paragraph
+		of copy.
+	</p>
+	<p>
+		The first alert should come from an external file in your project that is
+		included in the <tt>&lt;head&gt;</tt> portion of your file.  The second alert should
+		be triggered by an inline script tag at the bottom of your HTML page.  For the third
+		alert, you won't include anything in the page, just trigger the alert
+		via Firebug.
+	</p>
+	<script type="text/javascript" charset="utf-8">
+		var current_date = new Date();
+		alert("From the Script Tag: " + current_date);
+	</script>
+</body>
+
+</html>
